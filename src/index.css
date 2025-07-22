@@ -10,3 +10,8 @@
 main{
   flex-grow: 1;
 }
+
+.bg-index{
+  background: #2C2B4B;
+  background: linear-gradient(0deg,rgba(44, 43, 75, 1) 0%, rgba(33, 37, 41, 1) 100%);
+}
