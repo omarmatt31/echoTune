@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router";
 import Menu from "./components/shared/Menu"
 import Footer from "./components/shared/Footer"
-import Index from "./components/pages/Index"
+import Inicio from "./components/pages/Inicio"
 import DetalleCancion from "./components/pages/DetalleCancion";
 import Login from "./components/pages/Login";
 import Administrador from "./components/pages/Administrador";
@@ -17,7 +17,7 @@ function App() {
       <Menu></Menu>
       <main>
         <Routes>
-          <Route path="/" element={<Index></Index>}></Route>
+          <Route path="/" element={<Inicio></Inicio>}></Route>
           <Route path="/detalle" element={<DetalleCancion></DetalleCancion>}></Route>
           <Route path="/login" element={<Login></Login>}></Route>
           <Route path="/administrador" element={<Administrador></Administrador>}></Route>

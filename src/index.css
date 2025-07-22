@@ -10,3 +10,21 @@
 main{
   flex-grow: 1;
 }
+
+.bg-index{
+  background: #2C2B4B;
+  background: linear-gradient(0deg,rgba(44, 43, 75, 1) 0%, rgba(33, 37, 41, 1) 100%);
+}
+
+.bg-card{
+  background: #2C2B4B;
+  background: linear-gradient(180deg,rgba(44, 43, 75, 1) 0%, rgba(55, 52, 97, 1) 100%);
+}
+.color-secundario{
+  color: #9ddacb
+}
+.card-size {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
