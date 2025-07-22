@@ -25,6 +25,11 @@ const Index = () => {
                 <hr />
                 <Row>
                     <CardCancion></CardCancion>
+                    <CardCancion></CardCancion>
+                    <CardCancion></CardCancion>
+                    <CardCancion></CardCancion>
+                    <CardCancion></CardCancion>
+                    <CardCancion></CardCancion>
                 </Row>
             </Container>
         </section>
