@@ -49,4 +49,13 @@ main{
 
 .botones-administrador:hover .bi-database-add {
   color: #ffffff!important;
+
+.logo-nav {
+  width: 100px;
+}
+
+.navbar .nav-link.active {
+  font-weight: bold;
+  color: #ffffff !important;
+  text-decoration: underline;
 }
