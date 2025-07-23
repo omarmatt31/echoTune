@@ -34,9 +34,3 @@ main{
 .logo-nav {
   width: 100px;
 }
-
-.navbar .nav-link.active {
-  font-weight: bold;
-  color: #ffffff !important;
-  text-decoration: underline;
-}
