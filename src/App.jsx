@@ -8,9 +8,10 @@ import Administrador from "./components/pages/Administrador";
 import Nosotros from "./components/pages/Nosotros";
 import FormularioCancion from "./components/pages/cancion/FormularioCancion";
 import Error404 from "./components/pages/Error404";
+import { useState } from "react";
 
 function App() {
-
+  const [canciones, setCanciones] = useState([])
   return (
     <>
     <BrowserRouter>
@@ -20,7 +21,7 @@ function App() {
           <Route path="/" element={<Inicio></Inicio>}></Route>
           <Route path="/detalle" element={<DetalleCancion></DetalleCancion>}></Route>
           <Route path="/login" element={<Login></Login>}></Route>
-          <Route path="/administrador" element={<Administrador></Administrador>}></Route>
+          <Route path="/administrador" element={<Administrador setCanciones={setCanciones} canciones={canciones}></Administrador>}></Route>
           <Route path="/nosotros" element={<Nosotros></Nosotros>}></Route>
           <Route path="/administrador/crear" element={<FormularioCancion></FormularioCancion>}></Route>
           <Route path="*" element={<Error404></Error404>}></Route>

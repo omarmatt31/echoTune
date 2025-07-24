@@ -1,7 +1,11 @@
 import { Button, Table} from "react-bootstrap";
 import ItemCancion from "./cancion/ItemCancion"
 
-const Administrador = () => {
+const Administrador = ({setCanciones, canciones}) => {
+
+    const cargarCancionesPrueba=()=>{
+        
+    }
     return (
         <>
         <hr />
@@ -13,7 +17,7 @@ const Administrador = () => {
                     <Button variant="outline-none" className="botones-administrador">
                         <i className="bi bi-plus-circle fs-2 color-secundario"></i>
                     </Button>
-                    <Button variant="outline-none " className="botones-administrador">
+                    <Button variant="outline-none " className="botones-administrador" onClick={cargarCancionesPrueba}>
                         <i class="bi bi-database-add fs-2 color-boton-cargar"></i>
                     </Button>
                     </div>
