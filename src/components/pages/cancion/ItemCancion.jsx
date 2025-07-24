@@ -1,20 +1,19 @@
 import { Button } from "react-bootstrap";
 
-const ItemCancion = () => {
+const ItemCancion = ({cancion, fila}) => {
     return (
     <tr>
-      <td className="text-center align-middle">1</td>
-      <td className="align-middle">Bohemian Rhapsody</td>
-      <td className="text-center align-middle">Queen</td>
-      <td className="text-center align-middle">Rock</td>
+      <td className="text-center align-middle">{fila}</td>
+      <td className="align-middle">{cancion.titulo}</td>
+      <td className="text-center align-middle">{cancion.artista}</td>
+      <td className="text-center align-middle">{cancion.genero}</td>
       <td className="text-center">
         <img
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Queen_A_Night_At_The_Opera_%281975_Elektra_publicity_photo_02%29.jpg/500px-Queen_A_Night_At_The_Opera_%281975_Elektra_publicity_photo_02%29.jpg"
+          src={cancion.imagen}
           className="img-tabla "
-          alt="Poratada del disco"
+          alt={cancion.titulo}
         ></img>
       </td>
-
       <td className="text-center align-middle">
         <Button variant="outline-warning" className="me-lg-2 ">
           <i className="bi bi-pencil-square"></i>

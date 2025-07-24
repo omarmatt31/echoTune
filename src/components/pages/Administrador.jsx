@@ -1,10 +1,12 @@
 import { Button, Table} from "react-bootstrap";
 import ItemCancion from "./cancion/ItemCancion"
+import { cancionesData } from "../../data/cancionesPrueba";
+
 
 const Administrador = ({setCanciones, canciones}) => {
 
     const cargarCancionesPrueba=()=>{
-        
+        setCanciones(cancionesData)
     }
     return (
         <>
@@ -34,10 +36,9 @@ const Administrador = ({setCanciones, canciones}) => {
                     </tr>
                 </thead>
                 <tbody>
-                    <ItemCancion></ItemCancion>
-                    <ItemCancion></ItemCancion>
-                    <ItemCancion></ItemCancion>
-                    <ItemCancion></ItemCancion>
+                    {
+                    canciones.map((cancion, indice)=><ItemCancion key={cancion.id} cancion={cancion} fila={indice+1}></ItemCancion>)
+                    }
                 </tbody>
             </Table>
             </div>

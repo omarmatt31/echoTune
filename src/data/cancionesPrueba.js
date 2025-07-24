@@ -15,7 +15,7 @@ export const cancionesData = [
         artista: 'The Weeknd',
         album: 'After Hours',
         genero: 'Pop',
-        imagen: 'https://upload.wikimedia.org/wikipedia/en/thumb/e/e6/The_Weeknd_-_After_Hours.png/220px-The_Weeknd_-_After_Hours.png',
+        imagen: 'https://www.lahiguera.net/musicalia/artistas/the_weeknd/disco/10402/the_weeknd_after_hours-portada.jpg',
         duracion: '3:20',
         cancion: 'https://example.com/song2'
     },
@@ -45,7 +45,7 @@ export const cancionesData = [
         artista: 'Deadmau5',
         album: 'For Lack of a Better Name',
         genero: 'Electronica',
-        imagen: 'https://upload.wikimedia.org/wikipedia/en/thumb/5/5b/Deadmau5_-_For_Lack_of_a_Better_Name.png/220px-Deadmau5_-_For_Lack_of_a_Better_Name.png',
+        imagen: 'https://upload.wikimedia.org/wikipedia/en/e/e6/ForLackofaBetterNameAlbum.jpg',
         duracion: '10:37',
         cancion: 'https://example.com/song5'
     },
@@ -55,7 +55,7 @@ export const cancionesData = [
         artista: 'Mercedes Sosa',
         album: 'Alta fidelidad',
         genero: 'Folclore',
-        imagen: 'https://upload.wikimedia.org/wikipedia/en/thumb/5/5f/Mercedes_Sosa_-_Alta_Fidelidad.jpg/220px-Mercedes_Sosa_-_Alta_Fidelidad.jpg',
+        imagen: 'https://i.discogs.com/DR8Adg7bPu0Y4zqrAY0zvxkLBO_C-TMw0rIkFsWY8v0/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTEwMjY5/MzY2LTE0OTQ0MjU2/NjItOTMzNi5qcGVn.jpeg',
         duracion: '4:15',
         cancion: 'https://example.com/song6'
     },
@@ -65,7 +65,7 @@ export const cancionesData = [
         artista: 'Dave Brubeck Quartet',
         album: 'Time Out',
         genero: 'Jazz',
-        imagen: 'https://upload.wikimedia.org/wikipedia/en/thumb/5/5e/Timeoutalbumcover.jpg/220px-Timeoutalbumcover.jpg',
+        imagen: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Davebrubeckquartet1967a.jpg/960px-Davebrubeckquartet1967a.jpg',
         duracion: '5:24',
         cancion: 'https://example.com/song7'
     },
@@ -75,7 +75,7 @@ export const cancionesData = [
         artista: 'XXXTentacion',
         album: '?',
         genero: 'Trap',
-        imagen: 'https://upload.wikimedia.org/wikipedia/en/thumb/3/32/XXXTentacion_-_%3F.png/220px-XXXTentacion_-_%3F.png',
+        imagen: 'https://m.media-amazon.com/images/M/MV5BZjEwYTRjYzAtZjllNi00OTRiLWFkYzAtNzc4ZWQxZmQ1MzUwXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg',
         duracion: '2:46',
         cancion: 'https://example.com/song8'
     },
@@ -85,7 +85,7 @@ export const cancionesData = [
         artista: 'Guns N\' Roses',
         album: 'Appetite for Destruction',
         genero: 'Rock',
-        imagen: 'https://upload.wikimedia.org/wikipedia/en/thumb/6/60/GunsN%27RosesAppetiteforDestructionalbumcover.jpg/220px-GunsN%27RosesAppetiteforDestructionalbumcover.jpg',
+        imagen: 'https://indierocks.sfo3.cdn.digitaloceanspaces.com/wp-content/uploads/bfi_thumb/Guns-N-Roses_-Indierocks-2nyoxl93rx9mskd24mxwzuf8bj616ylqx9pr4uiz4457gttgnpre2kbcjbsbb4.jpg',
         duracion: '5:56',
         cancion: 'https://example.com/song9'
     },
@@ -105,7 +105,7 @@ export const cancionesData = [
         artista: 'Daft Punk',
         album: 'Discovery',
         genero: 'Electronica',
-        imagen: 'https://upload.wikimedia.org/wikipedia/en/thumb/a/ae/Daft_Punk_-_Discovery.jpg/220px-Daft_Punk_-_Discovery.jpg',
+        imagen: 'https://i.pinimg.com/1200x/49/b2/de/49b2de4504144d8f8ccdffee9b2fba71.jpg',
         duracion: '5:20',
         cancion: 'https://example.com/song11'
     }
