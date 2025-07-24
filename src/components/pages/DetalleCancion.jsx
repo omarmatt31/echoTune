@@ -18,7 +18,7 @@ const DetalleCancion = () => {
                         <Card.Text className="fw-semibold fs-3 text-center color-secundario mx-1">Queen</Card.Text>
                         <Card.Text className="fw-light fs-4 text-center color-secundario  mx-1">A Night at the Opera</Card.Text>
                         <div className="d-flex justify-content-evenly mt-5  mx-1">
-                            <div className="fw-light fs-5"><span className="fw-semibold"> Categoria: </span> Rock</div>
+                            <div className="fw-light fs-5"><span className="fw-semibold"> Genero: </span> Rock</div>
                             <div className="fw-light fs-5"><span className="fw-semibold">Duración:</span> 5:55</div>
                         </div>
                     </Card.Body>
