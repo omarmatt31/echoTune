@@ -1,10 +1,9 @@
 import { Container, Form, Row, Col, Button } from "react-bootstrap";
 import CardCancion from "./cancion/CardCancion";
 
-const Index = () => {
+const Inicio = ({canciones}) => {
     return (
         <>
-        <hr />
         <section className="mainSection bg-index">
             <Container className="mt-5">
                 <Form inline>
@@ -24,12 +23,9 @@ const Index = () => {
                     </Form>
                 <hr />
                 <Row>
-                    <CardCancion></CardCancion>
-                    <CardCancion></CardCancion>
-                    <CardCancion></CardCancion>
-                    <CardCancion></CardCancion>
-                    <CardCancion></CardCancion>
-                    <CardCancion></CardCancion>
+                    {
+                    canciones.map((cancion)=><CardCancion key={cancion.id} cancion={cancion}></CardCancion>)
+                    }
                 </Row>
             </Container>
         </section>
@@ -37,4 +33,4 @@ const Index = () => {
     );
 };
 
-export default Index;
+export default Inicio;

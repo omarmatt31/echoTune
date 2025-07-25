@@ -8,19 +8,25 @@ import Administrador from "./components/pages/Administrador";
 import Nosotros from "./components/pages/Nosotros";
 import FormularioCancion from "./components/pages/cancion/FormularioCancion";
 import Error404 from "./components/pages/Error404";
+import { useEffect, useState } from "react";
 
 function App() {
+  const cancionesLocalStorage = JSON.parse(localStorage.getItem('catalogoCanciones')) || []
+  const [canciones, setCanciones] = useState(cancionesLocalStorage)
 
+  useEffect(()=>{
+    localStorage.setItem('catalogoCanciones', JSON.stringify(canciones))
+  }, [canciones])
   return (
     <>
     <BrowserRouter>
       <Menu></Menu>
       <main>
         <Routes>
-          <Route path="/" element={<Inicio></Inicio>}></Route>
+          <Route path="/" element={<Inicio canciones={canciones}></Inicio>}></Route>
           <Route path="/detalle" element={<DetalleCancion></DetalleCancion>}></Route>
           <Route path="/login" element={<Login></Login>}></Route>
-          <Route path="/administrador" element={<Administrador></Administrador>}></Route>
+          <Route path="/administrador" element={<Administrador setCanciones={setCanciones} canciones={canciones}></Administrador>}></Route>
           <Route path="/nosotros" element={<Nosotros></Nosotros>}></Route>
           <Route path="/administrador/crear" element={<FormularioCancion></FormularioCancion>}></Route>
           <Route path="*" element={<Error404></Error404>}></Route>

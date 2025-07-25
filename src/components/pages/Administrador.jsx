@@ -1,7 +1,13 @@
 import { Button, Table} from "react-bootstrap";
 import ItemCancion from "./cancion/ItemCancion"
+import { cancionesData } from "../../data/cancionesPrueba";
 
-const Administrador = () => {
+
+const Administrador = ({setCanciones, canciones}) => {
+
+    const cargarCancionesPrueba=()=>{
+        setCanciones(cancionesData)
+    }
     return (
         <>
         <hr />
@@ -13,7 +19,7 @@ const Administrador = () => {
                     <Button variant="outline-none" className="botones-administrador">
                         <i className="bi bi-plus-circle fs-2 color-secundario"></i>
                     </Button>
-                    <Button variant="outline-none " className="botones-administrador">
+                    <Button variant="outline-none " className="botones-administrador" onClick={cargarCancionesPrueba}>
                         <i class="bi bi-database-add fs-2 color-boton-cargar"></i>
                     </Button>
                     </div>
@@ -30,10 +36,9 @@ const Administrador = () => {
                     </tr>
                 </thead>
                 <tbody>
-                    <ItemCancion></ItemCancion>
-                    <ItemCancion></ItemCancion>
-                    <ItemCancion></ItemCancion>
-                    <ItemCancion></ItemCancion>
+                    {
+                    canciones.map((cancion, indice)=><ItemCancion key={cancion.id} cancion={cancion} fila={indice+1}></ItemCancion>)
+                    }
                 </tbody>
             </Table>
             </div>
