@@ -6,7 +6,7 @@ const Inicio = ({canciones}) => {
         <>
         <section className="mainSection bg-index">
             <Container className="mt-5">
-                <Form inline>
+                <Form>
                         <Row className="d-flex justify-content-between">
                             <Col xs="auto">
                                 <h3 className="fw-light fs-3 color-secundario">Top Hits</h3>

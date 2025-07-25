@@ -1,8 +1,27 @@
 import { Container, Row, Col, Form, Button } from "react-bootstrap"
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router";
 import ImgLogin from '../../assets/echoTune_Logo-negativo.png'
+import { useForm } from "react-hook-form";
 
-const Login = () => {
+
+const Login = ({setUsuarioAdmin}) => {
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm();
+  const navegacion = useNavigate()
+
+  const iniciarSesion=(usuario)=>{
+    if(usuario.email === import.meta.env.VITE_API_EMAIL && usuario.password === import.meta.env.VITE_API_PASSWORD){
+      setUsuarioAdmin(true)
+      sessionStorage.setItem('userAdmin', true)
+      navegacion('/administrador')
+    }else {
+      console.log('Email o contraseña incorrecta')
+    }
+  }
   return (
     <section className="Section-Login bg-index">
       <Container className="py-4">
@@ -12,17 +31,31 @@ const Login = () => {
         </div>
         <Row className="d-flex flex-column align-items-center">
           <Col xs={12} sm={10} md={6} lg={5} >
-            <Form className="bg-dark-subtle p-4 rounded my-4">
+            <Form className="bg-dark-subtle p-4 rounded my-4" onSubmit={handleSubmit(iniciarSesion)}>
               <Form.Group className="mb-3" controlId="email">
                 <Form.Label>Email</Form.Label>
-                <Form.Control type="email" placeholder="Ej: juanperez@mail.com"/>
+                <Form.Control type="email" placeholder="Ej: juanperez@mail.com"{...register('email', {
+                  required:'El email es obligatorio',
+                  pattern:{
+                  value: /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/,
+                  message: 'El email debe tener un formato valido'
+                  }
+                  })}/>
                 <Form.Text className="text-danger">
+                  {errors.email?.message}
                 </Form.Text>
               </Form.Group>
               <Form.Group className="mb-3" controlId="password">
                 <Form.Label>Contraseña</Form.Label>
-                <Form.Control type="password" placeholder="Contraseña"/>
+                <Form.Control type="password" placeholder="Contraseña"{...register('password', {
+                  required: 'La contraseña es obligatoria',
+                  pattern: {
+                  value: /^(?=.*\d)(?=.*[\u0021-\u002b\u003c-\u0040])(?=.*[A-Z])(?=.*[a-z])\S{8,16}$/,
+                  message: 'La contraseña debe tener entre 8 y 16 caracteres, al menos un dígito, al menos una minúscula, al menos una mayúscula y al menos un caracter no alfanumérico.' 
+                  }
+                })}/>
                 <Form.Text className="text-danger">
+                  {errors.password?.message}
                 </Form.Text>
               </Form.Group>
               <div className="div-button d-flex flex-column align-items-center pt-3 pb-2">
