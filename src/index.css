@@ -11,10 +11,15 @@ main{
   flex-grow: 1;
 }
 
+
 .imagen-detalle {
   box-shadow: 4px 6px 5px 0px rgba(0,0,0,0.45);
   -webkit-box-shadow: 4px 6px 5px 0px rgba(0,0,0,0.45);
   -moz-box-shadow: 4px 6px 5px 0px rgba(0,0,0,0.45);
+
+
+.appstore{
+  width: 190px;
 }
 
 .contenedorImagen{
@@ -23,4 +28,56 @@ main{
 
 .contenedorImagen:hover{
     transform: scale(1.01);
+}
+
+.logotipo{
+  width: 230px;
+}
+
+.bg-index{
+  background: #2C2B4B;
+  background: linear-gradient(0deg,rgba(44, 43, 75, 1) 0%, rgba(33, 37, 41, 1) 100%);
+}
+
+.bg-card{
+  background: #2C2B4B;
+  background: linear-gradient(180deg,rgba(44, 43, 75, 1) 0%, rgba(55, 52, 97, 1) 100%);
+}
+.color-secundario{
+  color: #9ddacb
+}
+
+.color-boton-cargar{
+  color: #f8dcb4
+}
+.card-size {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.img-tabla {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+.botones-administrador{
+  transition: 300ms;
+}
+
+.botones-administrador:hover .bi-plus-circle{
+  color: #ffffff!important;
+}
+
+.botones-administrador:hover .bi-database-add {
+  color: #ffffff!important;
+}
+
+.logo-nav {
+  width: 100px;
+}
+
+.logo-login {
+  width: 180px;
 }
