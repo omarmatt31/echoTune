@@ -12,12 +12,24 @@ main{
 }
 
 
+.imagen-detalle {
+  box-shadow: 4px 6px 5px 0px rgba(0,0,0,0.45);
+  -webkit-box-shadow: 4px 6px 5px 0px rgba(0,0,0,0.45);
+  -moz-box-shadow: 4px 6px 5px 0px rgba(0,0,0,0.45);
+
+
 .appstore{
   width: 190px;
 }
-.playstore{
-  width: 190px;
+
+.contenedorImagen{
+  transition: 300ms;
 }
+
+.contenedorImagen:hover{
+    transform: scale(1.01);
+}
+
 .logotipo{
   width: 230px;
 }
