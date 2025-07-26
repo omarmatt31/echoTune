@@ -10,6 +10,7 @@ import FormularioCancion from "./components/pages/cancion/FormularioCancion";
 import Error404 from "./components/pages/Error404";
 import { useEffect, useState } from "react";
 import ProtectorAdmin from "./components/routes/ProtectorAdmin";
+import { v4 as uuidv4 } from 'uuid';
 
 function App() {
   const cancionesLocalStorage = JSON.parse(localStorage.getItem('catalogoCanciones')) || []
@@ -20,6 +21,13 @@ function App() {
   useEffect(()=>{
     localStorage.setItem('catalogoCanciones', JSON.stringify(canciones))
   }, [canciones])
+
+  const crearCancion = (cancionNueva) => {
+    cancionNueva.id = uuidv4()
+    setCanciones([...canciones, cancionNueva])
+    return true
+  }
+
   return (
     <>
     <BrowserRouter>
@@ -31,7 +39,7 @@ function App() {
           <Route path="/login" element={<Login setUsuarioAdmin={setUsuarioAdmin}></Login>}></Route>
           <Route path="/administrador" element={<ProtectorAdmin isAdmin={usuarioAdmin}></ProtectorAdmin>}>
             <Route index element={<Administrador setCanciones={setCanciones} canciones={canciones}></Administrador>}></Route>
-            <Route path="crear" element={<FormularioCancion></FormularioCancion>}></Route>
+            <Route path="crear" element={<FormularioCancion crearCancion={crearCancion}></FormularioCancion>}></Route>
             <Route path="editar" element={<FormularioCancion></FormularioCancion>}></Route>
           </Route>
           <Route path="/nosotros" element={<Nosotros></Nosotros>}></Route>
