@@ -1,6 +1,7 @@
 import { Button, Table} from "react-bootstrap";
 import ItemCancion from "./cancion/ItemCancion"
 import { cancionesData } from "../../data/cancionesPrueba";
+import { Link } from "react-router";
 
 
 const Administrador = ({setCanciones, canciones}) => {
@@ -15,12 +16,12 @@ const Administrador = ({setCanciones, canciones}) => {
             <h1 className="fw-light text-center">Lista de Canciones</h1>
             <div className="container">
                 <div className="d-flex justify-content-end mt-5">
-                    <div>
-                    <Button variant="outline-none" className="botones-administrador">
+                    <div className="d-flex flex-row align-items-center">
+                    <Link variant="outline-none" to={'/administrador/crear'} className="botones-administrador">
                         <i className="bi bi-plus-circle fs-2 color-secundario"></i>
-                    </Button>
+                    </Link>
                     <Button variant="outline-none " className="botones-administrador" onClick={cargarCancionesPrueba}>
-                        <i class="bi bi-database-add fs-2 color-boton-cargar"></i>
+                        <i className="bi bi-database-add fs-2 color-boton-cargar"></i>
                     </Button>
                     </div>
                 </div>
