@@ -9,6 +9,7 @@ import Nosotros from "./components/pages/Nosotros";
 import FormularioCancion from "./components/pages/cancion/FormularioCancion";
 import Error404 from "./components/pages/Error404";
 import { useEffect, useState } from "react";
+import ProtectorAdmin from "./components/routes/ProtectorAdmin";
 
 function App() {
   const cancionesLocalStorage = JSON.parse(localStorage.getItem('catalogoCanciones')) || []
@@ -28,9 +29,12 @@ function App() {
           <Route path="/" element={<Inicio canciones={canciones}></Inicio>}></Route>
           <Route path="/detalle" element={<DetalleCancion></DetalleCancion>}></Route>
           <Route path="/login" element={<Login setUsuarioAdmin={setUsuarioAdmin}></Login>}></Route>
-          <Route path="/administrador" element={<Administrador setCanciones={setCanciones} canciones={canciones}></Administrador>}></Route>
+          <Route path="/administrador" element={<ProtectorAdmin isAdmin={usuarioAdmin}></ProtectorAdmin>}>
+            <Route index element={<Administrador setCanciones={setCanciones} canciones={canciones}></Administrador>}></Route>
+            <Route path="crear" element={<FormularioCancion></FormularioCancion>}></Route>
+            <Route path="editar" element={<FormularioCancion></FormularioCancion>}></Route>
+          </Route>
           <Route path="/nosotros" element={<Nosotros></Nosotros>}></Route>
-          <Route path="/administrador/crear" element={<FormularioCancion></FormularioCancion>}></Route>
           <Route path="*" element={<Error404></Error404>}></Route>
         </Routes>
       </main>
