@@ -15,7 +15,7 @@ const CardCancion = ({cancion}) => {
                         </Card.Text>
                     </div>
                     <div className="d-flex ">
-                        <Button variant="" className="rounded-5 pe-0 pb-0"><i class="bi bi-play-circle fs-1 color-secundario"></i></Button>
+                        <Button variant="" className="rounded-5 pe-0 pb-0"><i className="bi bi-play-circle fs-1 color-secundario"></i></Button>
                     </div>
                 </Card.Body>
                 </div>
