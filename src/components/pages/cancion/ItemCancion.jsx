@@ -1,4 +1,5 @@
 import { Button } from "react-bootstrap";
+import { Link } from "react-router";
 
 const ItemCancion = ({cancion, fila}) => {
     return (
@@ -15,9 +16,9 @@ const ItemCancion = ({cancion, fila}) => {
         ></img>
       </td>
       <td className="text-center align-middle">
-        <Button variant="outline-warning" className="me-lg-2 ">
+        <Link className="me-lg-2 btn btn-outline-warning" to={'/administrador/editar/'+cancion.id}>
           <i className="bi bi-pencil-square"></i>
-        </Button>
+        </Link>
         <Button variant="outline-danger ">
           <i className="bi bi-trash"></i>
         </Button>

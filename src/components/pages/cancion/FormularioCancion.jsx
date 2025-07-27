@@ -2,32 +2,59 @@ import { Form, Button, Container, Row, Col } from "react-bootstrap";
 import EchoTuneIcono from '../../../assets/echoTune_Icono.png';
 import { useForm } from "react-hook-form";
 import Swal from 'sweetalert2'
+import { useParams } from "react-router";
+import { useEffect } from "react";
 
-const FormularioCancion = ({crearCancion}) => {
+const FormularioCancion = ({crearCancion, titulo, buscarCancion, editarCancion}) => {
 
   const {
     register,
     handleSubmit,
     reset,
     formState: { errors },
+    setValue,
   } = useForm();
+  const {id} = useParams()
+
+  useEffect(()=>{
+    if(titulo === 'Editar Canción'){
+      const cancionBuscada=buscarCancion(id)
+      console.log(cancionBuscada)
+      setValue('titulo', cancionBuscada.titulo)
+      setValue('artista', cancionBuscada.artista)
+      setValue('genero', cancionBuscada.genero)
+      setValue('imagen', cancionBuscada.imagen)
+    }
+  },[])
 
   const onSubmit = (cancion) => {
-    console.log(cancion);
-    if(crearCancion(cancion) === true) {
-      Swal.fire({
-        title: "Cancion Creada",
-        text: `La cancion ${cancion.titulo} ha sido creada con exito`,
-        icon: "success"
-      });
-      reset();
+    console.log('Entra al onsubmit')
+    if(titulo=== 'Añadir Canción'){
+      if(crearCancion(cancion) === true) {
+        Swal.fire({
+          title: "Cancion Creada",
+          text: `La cancion ${cancion.titulo} ha sido creada con exito`,
+          icon: "success"
+        });
+        reset();
+      }
+    }else{
+      console.log('entra al else')
+      if(editarCancion(id, cancion)){
+        console.log('entra al if')
+        Swal.fire({
+          title: "Cancion Modificada",
+          text: `La cancion ${cancion.titulo} ha sido modificada con exito`,
+          icon: "success"
+        });
+      }
     }
   };
 
   return (
     <section className="Section-Login bg-index">
       <Container>
-        <h1 className="display-4 mt-5 text-center">Añadir Canción</h1>
+        <h1 className="display-4 mt-5 text-center">{titulo}</h1>
         <hr />
         <Row  className="pt-4 pb-5">
           <Col sm={12} md={6} lg={6}>
@@ -50,7 +77,7 @@ const FormularioCancion = ({crearCancion}) => {
               })}
             />
             <Form.Text className="text-danger">
-            {errors.nombreProducto?.message}
+            {errors.titulo?.message}
           </Form.Text>
           </Form.Group>
           
@@ -71,8 +98,10 @@ const FormularioCancion = ({crearCancion}) => {
               },
               })}
             />
+            <Form.Text className="text-danger">
+            {errors.artista?.message}
+          </Form.Text>
           </Form.Group>
-          
           <Form.Group className="mb-3">
             <Form.Label>Genero: (*)</Form.Label>
             <Form.Select 
@@ -89,7 +118,7 @@ const FormularioCancion = ({crearCancion}) => {
               <option value="Trap">Trap</option>
             </Form.Select>
             <Form.Text className="text-danger">
-              {errors.categoria?.message}
+              {errors.genero?.message}
             </Form.Text>
           </Form.Group>
           
