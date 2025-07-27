@@ -9,8 +9,8 @@
 
 main{
   flex-grow: 1;
-}
 
+}
 
 .imagen-detalle {
   box-shadow: 4px 6px 5px 0px rgba(0,0,0,0.45);
@@ -86,3 +86,4 @@ main{
 .logo-login {
   width: 180px;
 }
+
