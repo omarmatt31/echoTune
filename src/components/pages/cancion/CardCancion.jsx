@@ -1,4 +1,6 @@
-import { Card, Col, Button } from "react-bootstrap";
+import { Card, Col} from "react-bootstrap";
+import { Link } from "react-router";
+
 const CardCancion = ({cancion}) => {
     return (
     <Col md={6} lg={4} className="mb-5">
@@ -15,7 +17,7 @@ const CardCancion = ({cancion}) => {
                         </Card.Text>
                     </div>
                     <div className="d-flex ">
-                        <Button variant="" className="rounded-5 pe-0 pb-0"><i className="bi bi-play-circle fs-1 color-secundario"></i></Button>
+                        <Link className="rounded-5 pe-0 pb-0" to={'/detalle/'+cancion.id}><i className="bi bi-play-circle fs-1 color-secundario"></i></Link>
                     </div>
                 </Card.Body>
                 </div>
