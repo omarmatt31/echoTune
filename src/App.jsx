@@ -57,7 +57,7 @@ function App() {
       <main>
         <Routes>
           <Route path="/" element={<Inicio canciones={canciones}></Inicio>}></Route>
-          <Route path="/detalle" element={<DetalleCancion></DetalleCancion>}></Route>
+          <Route path="/detalle/:id" element={<DetalleCancion buscarCancion={buscarCancion}></DetalleCancion>}></Route>
           <Route path="/login" element={<Login setUsuarioAdmin={setUsuarioAdmin}></Login>}></Route>
           <Route path="/administrador" element={<ProtectorAdmin isAdmin={usuarioAdmin}></ProtectorAdmin>}>
             <Route index element={<Administrador setCanciones={setCanciones} canciones={canciones}></Administrador>}></Route>
