@@ -1,15 +1,5 @@
 export const cancionesData = [
     {
-        id: '123sdf',
-        titulo: 'Bohemian Rhapsody',
-        artista: 'Queen',
-        album: 'A Night at the Opera',
-        genero: 'Rock',
-        imagen: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Queen_A_Night_At_The_Opera_%281975_Elektra_publicity_photo_02%29.jpg/500px-Queen_A_Night_At_The_Opera_%281975_Elektra_publicity_photo_02%29.jpg',
-        duracion: '5:55',
-        cancion: 'https://drive.google.com/file/d/1PcQwSsPLGbRDFUrNO6BiZUgh-y9ddFJj/view?usp=drive_link'
-    },
-    {
         id: '456ghj',
         titulo: 'Blinding Lights',
         artista: 'The Weeknd',
@@ -18,6 +8,16 @@ export const cancionesData = [
         imagen: 'https://www.lahiguera.net/musicalia/artistas/the_weeknd/disco/10402/the_weeknd_after_hours-portada.jpg',
         duracion: '3:20',
         cancion: 'https://example.com/song2'
+    },
+    {
+        id: '2345kjhk',
+        titulo: 'Bohemian Rhapsody',
+        artista: 'Queen',
+        album: 'A Night at the Opera',
+        genero: 'Rock',
+        imagen: 'https://upload.wikimedia.org/wikipedia/en/thumb/2/26/Led_Zeppelin_-_Led_Zeppelin_IV.jpg/220px-Led_Zeppelin_-_Led_Zeppelin_IV.jpg',
+        duracion: '5:45',
+        cancion: 'https://example.com/song1'
     },
     {
         id: '789klm',

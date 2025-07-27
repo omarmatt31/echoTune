@@ -28,6 +28,28 @@ function App() {
     return true
   }
 
+  const buscarCancion = (idCancion)=>{
+    const cancionBuscada = canciones.find((cancion)=>cancion.id === idCancion)
+    return cancionBuscada
+  }
+
+  const editarCancion=(idCancion, cancionActualizada)=>{
+    console.log(idCancion)
+    console.log(cancionActualizada)
+    const cancionEditada = canciones.map((itemCancion)=>{
+      if(itemCancion.id === idCancion){
+        return {
+          ...itemCancion,
+          ...cancionActualizada
+        }
+      }else{
+        return itemCancion
+      }
+    })
+    setCanciones(cancionEditada)
+    return true
+  }
+
   return (
     <>
     <BrowserRouter>
@@ -39,8 +61,8 @@ function App() {
           <Route path="/login" element={<Login setUsuarioAdmin={setUsuarioAdmin}></Login>}></Route>
           <Route path="/administrador" element={<ProtectorAdmin isAdmin={usuarioAdmin}></ProtectorAdmin>}>
             <Route index element={<Administrador setCanciones={setCanciones} canciones={canciones}></Administrador>}></Route>
-            <Route path="crear" element={<FormularioCancion crearCancion={crearCancion}></FormularioCancion>}></Route>
-            <Route path="editar" element={<FormularioCancion></FormularioCancion>}></Route>
+            <Route path="crear" element={<FormularioCancion titulo={'Añadir Canción'} crearCancion={crearCancion}></FormularioCancion>}></Route>
+            <Route path="editar/:id" element={<FormularioCancion titulo={'Editar Canción'} buscarCancion={buscarCancion} editarCancion={editarCancion}></FormularioCancion>}></Route>
           </Route>
           <Route path="/nosotros" element={<Nosotros></Nosotros>}></Route>
           <Route path="*" element={<Error404></Error404>}></Route>
