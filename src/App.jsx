@@ -16,7 +16,6 @@ function App() {
     <BrowserRouter>
       <Menu></Menu>
       <main>
-        <Nosotros></Nosotros>
         <Routes>
           <Route path="/" element={<Index></Index>}></Route>
           <Route path="/detalle" element={<DetalleCancion></DetalleCancion>}></Route>

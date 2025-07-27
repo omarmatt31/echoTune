@@ -6,30 +6,30 @@ import omarmattos from "../../assets/omarmatt01.png"
 const Nosotros = () => {
     return (
         <Container>
-            <h1 className='text-center'>Acerca de Nosotros</h1>
+            <h1 className='text-center fs-1'>Acerca de Nosotros</h1>
             <h3 className="text-center my-4">"Con pasión y código, nuestro equipo de desarrolladores construyó una página de música donde cada acorde y melodía cobra vida."</h3>
             <Row>
                 <Col md={4} lg={4} className="my-3">
                 <Card className="w-100">
-                    <img src={omarmattos} alt="Omar Mattos" className="img-fluid h-100 w-100"/>
+                    <img src={omarmattos} alt="Omar Mattos" className="img-fluid card-img-top"/>
                     <Card.Body>
-                        <Card.Title className="text-center fs-modificacion">Omar Mattos</Card.Title>
+                        <Card.Title className="text-center fs-4">Omar Oscar Alfredo Mattos</Card.Title>
                     </Card.Body>
                 </Card>
                 </Col>
                 <Col md={4} lg={4} className="my-3">
                 <Card className="w-100">
-                    <img src={santilacki} alt="Santiago Lacki" className="img-fluid h-100 w-100"/>
+                    <img src={santilacki} alt="Santiago Lacki" className="img-fluid card-img-top"/>
                     <Card.Body>
-                        <Card.Title className="text-center fs-modificacion">Santiago Lacki</Card.Title>
+                        <Card.Title className="text-center fs-4">Santiago Lacki Sinclair</Card.Title>
                     </Card.Body>
                 </Card>
                 </Col>
                 <Col md={4} lg={4} className="my-3">
-                <Card className="">
+                <Card className="w-100">
                     <img src={santigonz} alt="simon robben" className="img-fluid card-img-top"/>
                     <Card.Body>
-                        <Card.Title className="text-center fs-modificacion">Santiago Gonzalez</Card.Title>
+                        <Card.Title className="text-center fs-4">Santiago Uriel Gonzalez</Card.Title>
                     </Card.Body>
                 </Card>
                 </Col>
