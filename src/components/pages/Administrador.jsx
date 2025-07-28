@@ -4,7 +4,7 @@ import { cancionesData } from "../../data/cancionesPrueba";
 import { Link } from "react-router";
 
 
-const Administrador = ({setCanciones, canciones}) => {
+const Administrador = ({setCanciones, canciones, borrarCancion}) => {
 
     const cargarCancionesPrueba=()=>{
         setCanciones(cancionesData)
@@ -38,7 +38,7 @@ const Administrador = ({setCanciones, canciones}) => {
                 </thead>
                 <tbody>
                     {
-                    canciones.map((cancion, indice)=><ItemCancion key={cancion.id} cancion={cancion} fila={indice+1}></ItemCancion>)
+                    canciones.map((cancion, indice)=><ItemCancion key={cancion.id} cancion={cancion} fila={indice+1} borrarCancion={borrarCancion}></ItemCancion>)
                     }
                 </tbody>
             </Table>
