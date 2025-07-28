@@ -50,6 +50,12 @@ function App() {
     return true
   }
 
+  const borrarCancion = (idCancion) => {
+    const cancionesFiltradas = canciones.filter((itemCancion) => itemCancion.id !== idCancion)
+    setCanciones(cancionesFiltradas)
+    return true
+  } 
+
   return (
     <>
     <BrowserRouter>
@@ -60,7 +66,7 @@ function App() {
           <Route path="/detalle/:id" element={<DetalleCancion buscarCancion={buscarCancion}></DetalleCancion>}></Route>
           <Route path="/login" element={<Login setUsuarioAdmin={setUsuarioAdmin}></Login>}></Route>
           <Route path="/administrador" element={<ProtectorAdmin isAdmin={usuarioAdmin}></ProtectorAdmin>}>
-            <Route index element={<Administrador setCanciones={setCanciones} canciones={canciones}></Administrador>}></Route>
+            <Route index element={<Administrador setCanciones={setCanciones} canciones={canciones} borrarCancion={borrarCancion}></Administrador>}></Route>
             <Route path="crear" element={<FormularioCancion titulo={'Añadir Canción'} crearCancion={crearCancion}></FormularioCancion>}></Route>
             <Route path="editar/:id" element={<FormularioCancion titulo={'Editar Canción'} buscarCancion={buscarCancion} editarCancion={editarCancion}></FormularioCancion>}></Route>
           </Route>
