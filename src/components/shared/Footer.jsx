@@ -11,27 +11,26 @@ const Footer = () => {
         <Col md={12} lg={12} className="text-center">
             <Link className="link"><img src={echoLogo} alt="logotipo" className="img-fluid logotipo"/></Link>
         </Col>
-         <Col md={6} lg={4} className="text-center">
+         <Col md={4} lg={4} className="text-center">
                     <h4 className="text-light">Disponible en mobiles</h4>
                     <div className="d-flex justify-content-center gap-2">
-                        <Link className="link"><img src={badgeapple} alt="appstore" className=" img-fluid appstore"/></Link>
-                        <Link className="link"><img src={googleplay} alt="playstore" className="img-fluid playstore"/></Link>
+                        <a href="https://www.apple.com/la/app-store/" target="_blank" className="link"><img src={badgeapple} alt="appstore" className=" img-fluid appstore"/></a>
+                        <a href="https://play.google.com/store/games?hl=es_AR&pli=1" target="_blank" className="link"><img src={googleplay} alt="playstore" className="img-fluid playstore"/></a>
                     </div>
           </Col>
-                <Col md={6} lg={4} className="text-center">
+                <Col md={4} lg={4} className="text-center">
                     <ul className="list-unstyled">
                         <Link className="link text-light fs-5"><li>Inicio</li></Link>
                        <Link className="link text-light fs-5"> <li>Nosotros</li></Link>
                         <Link className="link text-light fs-5"><li>Registrarse</li></Link>
-                       <Link className="link text-light fs-5"> <li>Iniciar Sesión</li></Link>
                     </ul>
                 </Col>
-                <Col md={12} lg={4} className="text-center">
-                <h4 className="text-light my-2">Seguinos en nuestras redes</h4>
+                <Col md={4} lg={4} className="text-center">
+                <h4 className="text-light">Seguinos en redes</h4>
                 <div className="d-flex justify-content-center gap-3">
-                    <Link className="link text-light"><i className="bi bi-twitter-x text-light fs-2"></i></Link>
-                    <Link className="link text-light"><i className="bi bi-facebook color-facebook fs-2"></i></Link>
-                    <Link className="link text-light"><i className="bi bi-instagram fs-2 color-instagram"></i></Link>
+                    <a href="https://x.com/?lang=es" target="_blank"  className="link text-light"><i className="bi bi-twitter-x text-light fs-2"></i></a>
+                    <a href="https://www.facebook.com/?locale=es_LA" target="_blank" className="link text-light"><i className="bi bi-facebook color-facebook fs-2"></i></a>
+                    <a href="https://www.instagram.com/" target="_blank" className="link text-light"><i className="bi bi-instagram fs-2 color-instagram"></i></a>
                     </div>
                 </Col>
                 </Row>
