@@ -8,9 +8,6 @@ const Footer = () => {
     return (
  <footer className=" bg-dark-subtle py-3 pe-3 ps-3 d-flex justify-content-around">
     <Row>
-        <Col md={12} lg={12} className="text-center">
-            <Link className="link"><img src={echoLogo} alt="logotipo" className="img-fluid logotipo"/></Link>
-        </Col>
          <Col md={4} lg={4} className="text-center">
                     <h4 className="text-light">Disponible en mobiles</h4>
                     <div className="d-flex justify-content-center gap-2">
@@ -19,11 +16,7 @@ const Footer = () => {
                     </div>
           </Col>
                 <Col md={4} lg={4} className="text-center">
-                    <ul className="list-unstyled">
-                        <Link className="link text-light fs-5"><li>Inicio</li></Link>
-                       <Link className="link text-light fs-5"> <li>Nosotros</li></Link>
-                        <Link className="link text-light fs-5"><li>Registrarse</li></Link>
-                    </ul>
+                   <img src={echoLogo} alt="logotipo" className="img-fluid logotipo"/>
                 </Col>
                 <Col md={4} lg={4} className="text-center">
                 <h4 className="text-light">Seguinos en redes</h4>
