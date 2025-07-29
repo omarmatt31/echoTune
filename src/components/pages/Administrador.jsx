@@ -3,7 +3,6 @@ import ItemCancion from "./cancion/ItemCancion"
 import { cancionesData } from "../../data/cancionesPrueba";
 import { Link } from "react-router";
 
-
 const Administrador = ({setCanciones, canciones, borrarCancion}) => {
 
     const cargarCancionesPrueba=()=>{
@@ -20,9 +19,17 @@ const Administrador = ({setCanciones, canciones, borrarCancion}) => {
                     <Link variant="outline-none" to={'/administrador/crear'} className="botones-administrador">
                         <i className="bi bi-plus-circle fs-2 color-secundario"></i>
                     </Link>
-                    <Button variant="outline-none " className="botones-administrador" onClick={cargarCancionesPrueba}>
-                        <i className="bi bi-database-add fs-2 color-boton-cargar"></i>
-                    </Button>
+                    {
+                        canciones.length > 0 ?(
+                            <Button variant="link" className="botones-administrador" onClick={cargarCancionesPrueba} disabled>
+                                <i className="bi bi-database-add fs-2 color-boton-cargar"></i>
+                            </Button>
+                        ) : (
+                            <Button variant="link" className="botones-administrador" onClick={cargarCancionesPrueba}>
+                                <i className="bi bi-database-add fs-2 color-boton-cargar"></i>
+                            </Button>
+                        )
+                    }
                     </div>
                 </div>
                 <Table className="container mb-5" responsive striped bordered hover>
