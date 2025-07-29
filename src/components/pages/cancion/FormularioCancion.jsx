@@ -143,7 +143,7 @@ const FormularioCancion = ({crearCancion, titulo, buscarCancion, editarCancion})
           </Form.Group>
 
           <Button type="submit" variant="primary" className="my-1">
-            Añadir
+            Guardar
           </Button>
         </Form>
           </Col>
