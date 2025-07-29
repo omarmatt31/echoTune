@@ -2,8 +2,8 @@ import { Form, Button, Container, Row, Col } from "react-bootstrap";
 import EchoTuneIcono from '../../../assets/echoTune_Icono.png';
 import { useForm } from "react-hook-form";
 import Swal from 'sweetalert2'
-import { useParams } from "react-router";
-import { useEffect } from "react";
+import { useNavigate, useParams } from "react-router";
+import { useEffect, useState } from "react";
 
 const FormularioCancion = ({crearCancion, titulo, buscarCancion, editarCancion}) => {
 
@@ -15,15 +15,21 @@ const FormularioCancion = ({crearCancion, titulo, buscarCancion, editarCancion})
     setValue,
   } = useForm();
   const {id} = useParams()
-
+  const navegacion = useNavigate()
+  const [cargando, setCargando] = useState(true)
+  
   useEffect(()=>{
     if(titulo === 'Editar Canción'){
       const cancionBuscada=buscarCancion(id)
-      console.log(cancionBuscada)
-      setValue('titulo', cancionBuscada.titulo)
-      setValue('artista', cancionBuscada.artista)
-      setValue('genero', cancionBuscada.genero)
-      setValue('imagen', cancionBuscada.imagen)
+      if(cancionBuscada === undefined){
+        navegacion('*')
+      }else{
+        setCargando(false)
+        setValue('titulo', cancionBuscada.titulo)
+        setValue('artista', cancionBuscada.artista)
+        setValue('genero', cancionBuscada.genero)
+        setValue('imagen', cancionBuscada.imagen)
+      }
     }
   },[])
 
@@ -50,6 +56,10 @@ const FormularioCancion = ({crearCancion, titulo, buscarCancion, editarCancion})
       }
     }
   };
+
+  if(cargando){
+    return null;
+  }
 
   return (
     <section className="Section-Login bg-index">
