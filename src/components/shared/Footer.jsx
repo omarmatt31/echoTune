@@ -1,3 +1,4 @@
+
 import { Link } from "react-router";
 import badgeapple from "../../assets/badge-apple-store.svg"
 import googleplay from "../../assets/google-play-badge-bb.svg"
@@ -30,5 +31,4 @@ const Footer = () => {
         </footer>
     );
 };
-
 export default Footer;
