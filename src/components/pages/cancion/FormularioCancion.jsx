@@ -2,7 +2,7 @@ import { Form, Button, Container, Row, Col } from "react-bootstrap";
 import EchoTuneIcono from '../../../assets/echoTune_Icono.png';
 import { useForm } from "react-hook-form";
 import Swal from 'sweetalert2'
-import { useNavigate, useParams } from "react-router";
+import { Link, useNavigate, useParams } from "react-router";
 import { useEffect, useState } from "react";
 
 const FormularioCancion = ({crearCancion, titulo, buscarCancion, editarCancion}) => {
@@ -27,14 +27,16 @@ const FormularioCancion = ({crearCancion, titulo, buscarCancion, editarCancion})
         setCargando(false)
         setValue('titulo', cancionBuscada.titulo)
         setValue('artista', cancionBuscada.artista)
+        setValue('album', cancionBuscada.album)
         setValue('genero', cancionBuscada.genero)
         setValue('imagen', cancionBuscada.imagen)
+        setValue('duracion', cancionBuscada.duracion)
+        setValue('audio', cancionBuscada.audio)
       }
     }
   },[])
 
   const onSubmit = (cancion) => {
-    console.log('Entra al onsubmit')
     if(titulo=== 'Añadir Canción'){
       if(crearCancion(cancion) === true) {
         Swal.fire({
@@ -45,9 +47,7 @@ const FormularioCancion = ({crearCancion, titulo, buscarCancion, editarCancion})
         reset();
       }
     }else{
-      console.log('entra al else')
       if(editarCancion(id, cancion)){
-        console.log('entra al if')
         Swal.fire({
           title: "Cancion Modificada",
           text: `La cancion ${cancion.titulo} ha sido modificada con exito`,
@@ -55,9 +55,10 @@ const FormularioCancion = ({crearCancion, titulo, buscarCancion, editarCancion})
         });
       }
     }
+    navegacion("/administrador")
   };
 
-  if(cargando){
+  if(cargando && titulo === 'Editar Canción'){
     return null;
   }
 
@@ -103,8 +104,8 @@ const FormularioCancion = ({crearCancion, titulo, buscarCancion, editarCancion})
                 message: 'El titulo de la cancion debe tener al menos 3 caracteres',
               },
               maxLength: {
-                value: 50,
-                message: 'El titulo de la cancion debe tener como maximo 50 caracteres',
+                value: 50, 
+                message: 'Eltitulo de la cancion debe tener como maximo 50 caracteres',
               },
               })}
             />
@@ -112,6 +113,29 @@ const FormularioCancion = ({crearCancion, titulo, buscarCancion, editarCancion})
             {errors.artista?.message}
           </Form.Text>
           </Form.Group>
+
+          <Form.Group className="mb-3">
+            <Form.Label>Album: (*)</Form.Label>
+            <Form.Control 
+              type="text" 
+              placeholder="Ej: After Hours" 
+              {...register('album', {
+                required : 'El album de la cancion es un dato obligatorio.',
+                minLength: {
+                value: 3,
+                message: 'El album de la cancion debe tener al menos 3 caracteres',
+              },
+              maxLength: {
+                value: 50, 
+                message: 'El album de la cancion debe tener como maximo 50 caracteres',
+              },
+              })}
+            />
+            <Form.Text className="text-danger">
+            {errors.album?.message}
+          </Form.Text>
+          </Form.Group>
+
           <Form.Group className="mb-3">
             <Form.Label>Genero: (*)</Form.Label>
             <Form.Select 
@@ -152,9 +176,62 @@ const FormularioCancion = ({crearCancion, titulo, buscarCancion, editarCancion})
               </Form.Text>
           </Form.Group>
 
-          <Button type="submit" variant="primary" className="my-1">
+          <Form.Group className="mb-3">
+            <Form.Label>Duración: (*)</Form.Label>
+            <Form.Control 
+              type="text" 
+              placeholder="Ej: 03:45" 
+              {...register('duracion', {
+                required : 'La duración de la cancion es un dato obligatorio.',
+                minLength: {
+                value: 5,
+                message: 'La duración de la cancion debe tener al menos 5 caracteres',
+              },
+              maxLength: {
+                value: 5, 
+                message: 'La duración de la cancion debe tener como maximo 5 caracteres',
+              },
+              pattern: {
+                value:
+                  /^([0-5]?[0-9]):([0-5][0-9])$/,
+                message:
+                  "La duración debe ser en formato de minutos y segundos (02:30))",
+              },
+              })}
+            />
+            <Form.Text className="text-danger">
+            {errors.duracion?.message}
+          </Form.Text>
+          </Form.Group>
+
+          <Form.Group className="mb-3">
+            <Form.Label>Audio URL: (*)</Form.Label>
+            <Form.Control 
+              type="text" 
+              placeholder="Ej: https://www.spotify.com/the-weekend-blinding-lights-3456345/" 
+              {...register('audio', {
+                required: "La url del audio de la cancion es un dato obligatorio",
+                pattern: {
+                value:
+                  /^(https?:\/\/)?([a-zA-Z0-9.-]+(?:\.[a-zA-Z]{2,6}))(?:[:][0-9]{1,5})?(?:\/[^\/\s]*)*\.(mp3|wav|ogg|aac|flac|m4a|wma)(?:[\?#].*)?$/,
+                message:
+                  "El audio debe ser una URL directa a un archivo .mp3, .wav, .ogg, .aac, .flac, .m4a, o .wma.",
+              },
+              })}
+              />
+              <Form.Text className="text-danger">
+                {errors.audio?.message}
+              </Form.Text>
+          </Form.Group>
+
+          <div className="d-flex flex-row justify-content-center gap-3">
+            <Button type="submit" variant="primary" className="my-1">
             Guardar
           </Button>
+          <Link to={"/administrador"} className="btn btn-danger my-1">
+            Cancelar
+          </Link>
+          </div>
         </Form>
           </Col>
           <Col md={6} lg={6} className="d-none d-md-flex align-items-md-center justify-content-md-center">
