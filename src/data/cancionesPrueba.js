@@ -6,7 +6,7 @@ export const cancionesData = [
         album: 'After Hours',
         genero: 'Pop',
         imagen: 'https://res.cloudinary.com/duwi53e7z/image/upload/v1753838253/the_weeknd_after_hours-portada_d3vjxo.jpg',
-        duracion: '3:20',
+        duracion: '03:20',
         audio: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3'
     },
     {
@@ -16,7 +16,7 @@ export const cancionesData = [
         album: 'A Night at the Opera',
         genero: 'Rock',
         imagen: 'https://res.cloudinary.com/duwi53e7z/image/upload/v1753838294/queen-la-banda-color-portada-disco_jliakh.jpg',
-        duracion: '5:45',
+        duracion: '05:45',
         audio: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3'
     },
     {
@@ -26,7 +26,7 @@ export const cancionesData = [
         album: 'Led Zeppelin IV',
         genero: 'Rock',
         imagen: 'https://res.cloudinary.com/duwi53e7z/image/upload/v1753838374/Led_Zeppelin_-_Led_Zeppelin_IV_zpsn36.jpg',
-        duracion: '8:02',
+        duracion: '08:02',
         audio: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3'
     },
     {
@@ -36,7 +36,7 @@ export const cancionesData = [
         album: '÷',
         genero: 'Pop',
         imagen: 'https://res.cloudinary.com/duwi53e7z/image/upload/v1753838412/Divide_cover_pdsol6.png',
-        duracion: '3:53',
+        duracion: '03:53',
         audio: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3'
     },
     {
@@ -56,7 +56,7 @@ export const cancionesData = [
         album: 'Alta fidelidad',
         genero: 'Folclore',
         imagen: 'https://res.cloudinary.com/duwi53e7z/image/upload/v1753838574/ab67616d0000b273ef3b7e0e077a821abbac6bf6_c15psy.jpg',
-        duracion: '4:15',
+        duracion: '04:15',
         audio: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-6.mp3'
     },
     {
@@ -66,7 +66,7 @@ export const cancionesData = [
         album: 'Time Out',
         genero: 'Jazz',
         imagen: 'https://res.cloudinary.com/duwi53e7z/image/upload/v1753838610/Davebrubeckquartet1967a_ft566x.jpg',
-        duracion: '5:24',
+        duracion: '05:24',
         audio: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-7.mp3'
     },
     {
@@ -76,7 +76,7 @@ export const cancionesData = [
         album: '?',
         genero: 'Trap',
         imagen: 'https://res.cloudinary.com/duwi53e7z/image/upload/v1753838643/MV5BZjEwYTRjYzAtZjllNi00OTRiLWFkYzAtNzc4ZWQxZmQ1MzUwXkEyXkFqcGc._V1_FMjpg_UX1000__jxaxo8.jpg',
-        duracion: '2:46',
+        duracion: '02:46',
         audio: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-8.mp3'
     },
     {
@@ -86,7 +86,7 @@ export const cancionesData = [
         album: 'Appetite for Destruction',
         genero: 'Rock',
         imagen: 'https://res.cloudinary.com/duwi53e7z/image/upload/v1753838676/Guns-N-Roses_-Indierocks-2nyoxl93rx9mskd24mxwzuf8bj616ylqx9pr4uiz4457gttgnpre2kbcjbsbb4_nwvax2.jpg',
-        duracion: '5:56',
+        duracion: '05:56',
         audio: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-9.mp3'
     },
     {
@@ -96,7 +96,7 @@ export const cancionesData = [
         album: 'Thriller',
         genero: 'Pop',
         imagen: 'https://res.cloudinary.com/duwi53e7z/image/upload/v1753838836/thriller-arte-de-tapa-1_nxkbxx.png',
-        duracion: '4:54',
+        duracion: '04:54',
         audio: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-10.mp3'
     },
     {
@@ -106,7 +106,7 @@ export const cancionesData = [
         album: 'Discovery',
         genero: 'Electronica',
         imagen: 'https://res.cloudinary.com/duwi53e7z/image/upload/v1753838876/49b2de4504144d8f8ccdffee9b2fba71_ywwahn.jpg',
-        duracion: '5:20',
+        duracion: '05:20',
         audio: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-11.mp3'
     }
 ];
