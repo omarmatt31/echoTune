@@ -19,8 +19,11 @@ main{
 }
 
 .appstore{
-  width: 190px;
+  width: 250px;
 }
+
+.playstore{
+  width: 250px;
 
 .contenedorImagen{
   transition: 300ms;
@@ -28,6 +31,7 @@ main{
 
 .contenedorImagen:hover{
     transform: scale(1.01);
+
 }
 
 .logotipo{
