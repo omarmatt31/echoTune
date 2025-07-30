@@ -6,18 +6,12 @@ import BannerVideo from "../../assets/Banner.mp4"
 
 const Inicio = ({canciones}) => {
     const [terminoBusqueda, setTerminoBusqueda] = useState('')
-    const listaRock = canciones.filter((itemCancion) => itemCancion.genero === 'Rock')|| []
-    const [cancionesRock, setCancionesRock] = useState(listaRock)
-    const listaPop = canciones.filter((itemCancion) => itemCancion.genero === 'Pop')|| []
-    const [cancionesPop, setCancionesPop] = useState(listaPop)
-    const listaElectronica = canciones.filter((itemCancion) => itemCancion.genero === 'Electronica')|| []
-    const [cancionesElectronica, setCancionesElectronica] = useState(listaElectronica)
-    const listaFolclore = canciones.filter((itemCancion) => itemCancion.genero === 'Folclore')|| []
-    const [cancionesFolclore, setCancionesFolclore] = useState(listaFolclore)
-    const listaJazz = canciones.filter((itemCancion) => itemCancion.genero === 'Jazz')|| []
-    const [cancionesJazz, setCancionesJazz] = useState(listaJazz)
-    const listaTrap = canciones.filter((itemCancion) => itemCancion.genero === 'Trap')|| []
-    const [cancionesTrap, setCancionesTrap] = useState(listaTrap)
+    const cancionesRock = canciones.filter((itemCancion) => itemCancion.genero === 'Rock')
+    const cancionesPop= canciones.filter((itemCancion) => itemCancion.genero === 'Pop')
+    const cancionesElectronica = canciones.filter((itemCancion) => itemCancion.genero === 'Electronica')
+    const cancionesFolclore= canciones.filter((itemCancion) => itemCancion.genero === 'Folclore')
+    const cancionesJazz = canciones.filter((itemCancion) => itemCancion.genero === 'Jazz')
+    const cancionesTrap= canciones.filter((itemCancion) => itemCancion.genero === 'Trap')
     const [buscando, setBuscando] = useState(false)
 
     const handleBuscarChange=(e)=>{
