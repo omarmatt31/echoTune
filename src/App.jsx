@@ -34,8 +34,6 @@ function App() {
   }
 
   const editarCancion=(idCancion, cancionActualizada)=>{
-    console.log(idCancion)
-    console.log(cancionActualizada)
     const cancionEditada = canciones.map((itemCancion)=>{
       if(itemCancion.id === idCancion){
         return {

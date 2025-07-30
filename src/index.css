@@ -19,7 +19,11 @@ main{
 }
 
 .appstore{
-  width: 190px;
+  width: 250px;
+}
+
+.playstore{
+  width: 250px;
 }
 
 .contenedorImagen{
@@ -28,6 +32,7 @@ main{
 
 .contenedorImagen:hover{
     transform: scale(1.01);
+
 }
 
 .logotipo{
@@ -87,3 +92,14 @@ main{
   width: 180px;
 }
 
+.banner-video{
+  height: 100px;
+  background: #000;
+}
+
+.contenedor-video{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}

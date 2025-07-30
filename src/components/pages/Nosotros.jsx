@@ -5,7 +5,7 @@ import omarmattos from "../../assets/omarmatt01.png"
 
 const Nosotros = () => {
     return (
-        <Container>
+        <Container className="my-5">
             <h1 className='text-center fs-1'>Acerca de Nosotros</h1>
             <h3 className="text-center my-4">"Con pasión y código, nuestro equipo de desarrolladores construyó una página de música donde cada acorde y melodía cobra vida."</h3>
             <Row>
@@ -27,7 +27,7 @@ const Nosotros = () => {
                 </Col>
                 <Col md={4} lg={4} className="my-3">
                 <Card className="w-100">
-                    <img src={santigonz} alt="simon robben" className="img-fluid card-img-top"/>
+                    <img src={santigonz} alt="Santiago Gonzalez" className="img-fluid card-img-top"/>
                     <Card.Body>
                         <Card.Title className="text-center fs-4">Santiago Uriel Gonzalez</Card.Title>
                     </Card.Body>

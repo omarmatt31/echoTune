@@ -2,7 +2,7 @@ import { Container, Row, Col, Form, Button } from "react-bootstrap"
 import { Link, useNavigate } from "react-router";
 import ImgLogin from '../../assets/echoTune_Logo-negativo.png'
 import { useForm } from "react-hook-form";
-
+import Swal from "sweetalert2";
 
 const Login = ({setUsuarioAdmin}) => {
   const {
@@ -19,7 +19,12 @@ const Login = ({setUsuarioAdmin}) => {
       sessionStorage.setItem('userAdmin', true)
       navegacion('/administrador')
     }else {
-      console.log('Email o contraseña incorrecta')
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Usuario o contraseña incorrectos.",
+      });
+      reset();
     }
   }
   return (
@@ -51,7 +56,7 @@ const Login = ({setUsuarioAdmin}) => {
                   required: 'La contraseña es obligatoria',
                   pattern: {
                   value: /^(?=.*\d)(?=.*[\u0021-\u002b\u003c-\u0040])(?=.*[A-Z])(?=.*[a-z])\S{8,16}$/,
-                  message: 'La contraseña debe tener entre 8 y 16 caracteres, al menos un dígito, al menos una minúscula, al menos una mayúscula y al menos un caracter no alfanumérico.' 
+                  message: 'La contraseña debe tener entre 8 y 16 caracteres, una letra minúscula, una letra mayúscula un caracter numerico y un caracter especial como minimo.' 
                   }
                 })}/>
                 <Form.Text className="text-danger">
@@ -62,7 +67,7 @@ const Login = ({setUsuarioAdmin}) => {
                 <Button variant="primary" type="submit" className="mb-3">
                   Ingresar
                 </Button>
-                <Link>¿Olvidaste tu contraseña?</Link>
+                <Link to={"*"}>¿Olvidaste tu contraseña?</Link>
               </div>
             </Form>
           </Col>
