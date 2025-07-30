@@ -1,14 +1,26 @@
 import { useEffect, useState } from "react";
 import { Container, Card, Row, Col, Button } from "react-bootstrap";
-import { useParams } from "react-router";
+import { useNavigate, useParams } from "react-router";
+
 const DetalleCancion = ({buscarCancion}) => {
     const {id} = useParams()
     const [cancion, setCancion] = useState({})
+    const [cargando, setCargando] = useState(true)
+    const navegacion = useNavigate()
 
     useEffect(()=>{
         const cancionBuscada = buscarCancion(id)
-        setCancion(cancionBuscada)
+        if(cancionBuscada === undefined){
+            navegacion('*')
+        }else{
+            setCancion(cancionBuscada)
+            setCargando(false)
+        }
     },[])
+
+    if(cargando){
+        return null;
+    }
 
     return (
         <section className="bg-index">
