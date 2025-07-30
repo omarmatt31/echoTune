@@ -36,7 +36,7 @@ function Menu({ usuarioAdmin, setUsuarioAdmin }) {
                   Administrador
                 </NavLink>
                 <div className="d-flex align-items-start">
-                <Button variant="outline-none" className="nav-link" onClick={cerrarSesion}>Cerrar Sesión</Button>
+                    <Button variant="outline-none" className="nav-link" onClick={cerrarSesion}>Cerrar Sesión</Button>
                 </div>
                 <NavLink to={"/nosotros"} className="nav-link">
                   Nosotros

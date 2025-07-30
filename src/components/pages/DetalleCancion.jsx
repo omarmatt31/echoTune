@@ -12,14 +12,6 @@ const DetalleCancion = ({ buscarCancion }) => {
     setCancion(cancionBuscada);
   }, [id]);
 
-  const reproducirCancion = () => {
-    if (audioRef.current) {
-      audioRef.current.play()
-        .then(() => console.log("Reproduciendo..."))
-        .catch(err => console.error("Error al reproducir:", err));
-    }
-  };
-
   return (
     <section className="bg-index">
       <Container className="mt-3 py-5 bg-card rounded-4 w-50">

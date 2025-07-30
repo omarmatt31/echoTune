@@ -1,4 +1,4 @@
-import { Container, Form, Row, Col, Button } from "react-bootstrap";
+import { Container, Form, Row, Col} from "react-bootstrap";
 import CardCancion from "./cancion/CardCancion";
 import { useState } from "react";
 import BannerVideo from "../../assets/Banner.mp4"
@@ -30,17 +30,17 @@ const Inicio = ({canciones}) => {
     return (
         <>
         <div className="banner-video">
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="contenedor-video"
-        >
-          <source src={BannerVideo} type="video/mp4" />
-          Tu navegador no soporta videos HTML5.
-        </video>
-      </div>
+            <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="contenedor-video"
+            >
+                <source src={BannerVideo} type="video/mp4" />
+            Tu navegador no soporta videos HTML5.
+            </video>
+        </div>
         <section className="mainSection bg-index">
             <Container className="mt-5">
                 <Form>
