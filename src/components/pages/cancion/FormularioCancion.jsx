@@ -71,14 +71,14 @@ const FormularioCancion = ({crearCancion, titulo, buscarCancion, editarCancion})
           <Col sm={12} md={6} lg={6}>
               <Form className="bg-dark-subtle p-4 rounded" onSubmit={handleSubmit(onSubmit)}>
               <Form.Group className="mb-3">
-                <Form.Label>Titulo de la Canción: (*)</Form.Label>
+                <Form.Label>Titulo de la Canción: </Form.Label>
                 <Form.Control 
                   type="text" 
                   placeholder="Ej: Blinding Lights" 
                   {...register("titulo", {
                   required : 'El titulo de la cancion es un dato obligatorio.',
                   minLength: {
-                    value: 3,
+                    value: 1,
                     message: 'El titulo de la cancion debe tener al menos 3 caracteres',
                   },
                   maxLength: {
@@ -93,14 +93,14 @@ const FormularioCancion = ({crearCancion, titulo, buscarCancion, editarCancion})
               </Form.Group>
 
               <Form.Group className="mb-3">
-                <Form.Label>Artista/Grupo: (*)</Form.Label>
+                <Form.Label>Artista/Grupo: </Form.Label>
                 <Form.Control 
                   type="text" 
                   placeholder="Ej: The Weekend" 
                   {...register('artista', {
                     required : 'El artista/grupo de la cancion es un dato obligatorio.',
                     minLength: {
-                    value: 3,
+                    value: 1,
                     message: 'El titulo de la cancion debe tener al menos 3 caracteres',
                   },
                   maxLength: {
@@ -115,14 +115,14 @@ const FormularioCancion = ({crearCancion, titulo, buscarCancion, editarCancion})
               </Form.Group>
 
               <Form.Group className="mb-3">
-                <Form.Label>Album: (*)</Form.Label>
+                <Form.Label>Album: </Form.Label>
                 <Form.Control 
                   type="text" 
                   placeholder="Ej: After Hours" 
                   {...register('album', {
                     required : 'El album de la cancion es un dato obligatorio.',
                     minLength: {
-                    value: 3,
+                    value: 1,
                     message: 'El album de la cancion debe tener al menos 3 caracteres',
                   },
                   maxLength: {
@@ -137,7 +137,7 @@ const FormularioCancion = ({crearCancion, titulo, buscarCancion, editarCancion})
               </Form.Group>
 
               <Form.Group className="mb-3">
-                <Form.Label>Genero: (*)</Form.Label>
+                <Form.Label>Genero: </Form.Label>
                 <Form.Select 
                   {...register('genero', {
                     required: 'El genero de la cancion es un dato obligatorio.',
@@ -157,7 +157,7 @@ const FormularioCancion = ({crearCancion, titulo, buscarCancion, editarCancion})
               </Form.Group>
               
               <Form.Group className="mb-3">
-                <Form.Label>Imagen URL: (*)</Form.Label>
+                <Form.Label>Imagen URL: </Form.Label>
                 <Form.Control 
                   type="text" 
                   placeholder="Ej: https://www.pexels.com/es-es/the-weekend-blinding-lights-1230679/" 
@@ -177,7 +177,7 @@ const FormularioCancion = ({crearCancion, titulo, buscarCancion, editarCancion})
               </Form.Group>
 
               <Form.Group className="mb-3">
-                <Form.Label>Duración: (*)</Form.Label>
+                <Form.Label>Duración: </Form.Label>
                 <Form.Control 
                   type="text" 
                   placeholder="Ej: 03:45" 
@@ -205,7 +205,7 @@ const FormularioCancion = ({crearCancion, titulo, buscarCancion, editarCancion})
               </Form.Group>
 
               <Form.Group className="mb-3">
-                <Form.Label>Audio URL: (*)</Form.Label>
+                <Form.Label>Audio URL: </Form.Label>
                 <Form.Control 
                   type="text" 
                   placeholder="Ej: https://www.spotify.com/the-weekend-blinding-lights-3456345/" 
