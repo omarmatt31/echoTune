@@ -24,6 +24,7 @@ main{
 
 .playstore{
   width: 250px;
+}
 
 .contenedorImagen{
   transition: 300ms;
@@ -91,3 +92,14 @@ main{
   width: 180px;
 }
 
+.banner-video{
+  height: 100px;
+  background: #000;
+}
+
+.contenedor-video{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
