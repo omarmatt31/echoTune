@@ -27,7 +27,7 @@ const Nosotros = () => {
                 </Col>
                 <Col md={4} lg={4} className="my-3">
                 <Card className="w-100">
-                    <img src={santigonz} alt="simon robben" className="img-fluid card-img-top"/>
+                    <img src={santigonz} alt="Santiago Gonzalez" className="img-fluid card-img-top"/>
                     <Card.Body>
                         <Card.Title className="text-center fs-4">Santiago Uriel Gonzalez</Card.Title>
                     </Card.Body>
