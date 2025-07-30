@@ -5,7 +5,7 @@ import omarmattos from "../../assets/omarmatt01.png"
 
 const Nosotros = () => {
     return (
-        <Container>
+        <Container className="my-5">
             <h1 className='text-center fs-1'>Acerca de Nosotros</h1>
             <h3 className="text-center my-4">"Con pasión y código, nuestro equipo de desarrolladores construyó una página de música donde cada acorde y melodía cobra vida."</h3>
             <Row>
