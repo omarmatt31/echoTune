@@ -5,9 +5,9 @@ export const cancionesData = [
         artista: 'The Weeknd',
         album: 'After Hours',
         genero: 'Pop',
-        imagen: 'https://www.lahiguera.net/musicalia/artistas/the_weeknd/disco/10402/the_weeknd_after_hours-portada.jpg',
+        imagen: 'https://res.cloudinary.com/duwi53e7z/image/upload/v1753838253/the_weeknd_after_hours-portada_d3vjxo.jpg',
         duracion: '3:20',
-        cancion: 'https://example.com/song2'
+        audio: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3'
     },
     {
         id: '2345kjhk',
@@ -15,9 +15,9 @@ export const cancionesData = [
         artista: 'Queen',
         album: 'A Night at the Opera',
         genero: 'Rock',
-        imagen: 'https://upload.wikimedia.org/wikipedia/en/thumb/2/26/Led_Zeppelin_-_Led_Zeppelin_IV.jpg/220px-Led_Zeppelin_-_Led_Zeppelin_IV.jpg',
+        imagen: 'https://res.cloudinary.com/duwi53e7z/image/upload/v1753838294/queen-la-banda-color-portada-disco_jliakh.jpg',
         duracion: '5:45',
-        cancion: 'https://example.com/song1'
+        audio: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3'
     },
     {
         id: '789klm',
@@ -25,9 +25,9 @@ export const cancionesData = [
         artista: 'Led Zeppelin',
         album: 'Led Zeppelin IV',
         genero: 'Rock',
-        imagen: 'https://upload.wikimedia.org/wikipedia/en/thumb/2/26/Led_Zeppelin_-_Led_Zeppelin_IV.jpg/220px-Led_Zeppelin_-_Led_Zeppelin_IV.jpg',
+        imagen: 'https://res.cloudinary.com/duwi53e7z/image/upload/v1753838374/Led_Zeppelin_-_Led_Zeppelin_IV_zpsn36.jpg',
         duracion: '8:02',
-        cancion: 'https://example.com/song3'
+        audio: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3'
     },
     {
         id: '101nop',
@@ -35,9 +35,9 @@ export const cancionesData = [
         artista: 'Ed Sheeran',
         album: '÷',
         genero: 'Pop',
-        imagen: 'https://upload.wikimedia.org/wikipedia/en/thumb/4/45/Divide_cover.png/220px-Divide_cover.png',
+        imagen: 'https://res.cloudinary.com/duwi53e7z/image/upload/v1753838412/Divide_cover_pdsol6.png',
         duracion: '3:53',
-        cancion: 'https://example.com/song4'
+        audio: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3'
     },
     {
         id: '112qrs',
@@ -45,9 +45,9 @@ export const cancionesData = [
         artista: 'Deadmau5',
         album: 'For Lack of a Better Name',
         genero: 'Electronica',
-        imagen: 'https://upload.wikimedia.org/wikipedia/en/e/e6/ForLackofaBetterNameAlbum.jpg',
+        imagen: 'https://res.cloudinary.com/duwi53e7z/image/upload/v1753838516/ForLackofaBetterNameAlbum_msgxoa.jpg',
         duracion: '10:37',
-        cancion: 'https://example.com/song5'
+        audio: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-5.mp3'
     },
     {
         id: '131tuv',
@@ -55,9 +55,9 @@ export const cancionesData = [
         artista: 'Mercedes Sosa',
         album: 'Alta fidelidad',
         genero: 'Folclore',
-        imagen: 'https://i.discogs.com/DR8Adg7bPu0Y4zqrAY0zvxkLBO_C-TMw0rIkFsWY8v0/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTEwMjY5/MzY2LTE0OTQ0MjU2/NjItOTMzNi5qcGVn.jpeg',
+        imagen: 'https://res.cloudinary.com/duwi53e7z/image/upload/v1753838574/ab67616d0000b273ef3b7e0e077a821abbac6bf6_c15psy.jpg',
         duracion: '4:15',
-        cancion: 'https://example.com/song6'
+        audio: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-6.mp3'
     },
     {
         id: '415wxy',
@@ -65,9 +65,9 @@ export const cancionesData = [
         artista: 'Dave Brubeck Quartet',
         album: 'Time Out',
         genero: 'Jazz',
-        imagen: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Davebrubeckquartet1967a.jpg/960px-Davebrubeckquartet1967a.jpg',
+        imagen: 'https://res.cloudinary.com/duwi53e7z/image/upload/v1753838610/Davebrubeckquartet1967a_ft566x.jpg',
         duracion: '5:24',
-        cancion: 'https://example.com/song7'
+        audio: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-7.mp3'
     },
     {
         id: '161zab',
@@ -75,9 +75,9 @@ export const cancionesData = [
         artista: 'XXXTentacion',
         album: '?',
         genero: 'Trap',
-        imagen: 'https://m.media-amazon.com/images/M/MV5BZjEwYTRjYzAtZjllNi00OTRiLWFkYzAtNzc4ZWQxZmQ1MzUwXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg',
+        imagen: 'https://res.cloudinary.com/duwi53e7z/image/upload/v1753838643/MV5BZjEwYTRjYzAtZjllNi00OTRiLWFkYzAtNzc4ZWQxZmQ1MzUwXkEyXkFqcGc._V1_FMjpg_UX1000__jxaxo8.jpg',
         duracion: '2:46',
-        cancion: 'https://example.com/song8'
+        audio: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-8.mp3'
     },
     {
         id: '718cde',
@@ -85,9 +85,9 @@ export const cancionesData = [
         artista: 'Guns N\' Roses',
         album: 'Appetite for Destruction',
         genero: 'Rock',
-        imagen: 'https://indierocks.sfo3.cdn.digitaloceanspaces.com/wp-content/uploads/bfi_thumb/Guns-N-Roses_-Indierocks-2nyoxl93rx9mskd24mxwzuf8bj616ylqx9pr4uiz4457gttgnpre2kbcjbsbb4.jpg',
+        imagen: 'https://res.cloudinary.com/duwi53e7z/image/upload/v1753838676/Guns-N-Roses_-Indierocks-2nyoxl93rx9mskd24mxwzuf8bj616ylqx9pr4uiz4457gttgnpre2kbcjbsbb4_nwvax2.jpg',
         duracion: '5:56',
-        cancion: 'https://example.com/song9'
+        audio: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-9.mp3'
     },
     {
         id: '192fgh',
@@ -95,9 +95,9 @@ export const cancionesData = [
         artista: 'Michael Jackson',
         album: 'Thriller',
         genero: 'Pop',
-        imagen: 'https://upload.wikimedia.org/wikipedia/en/thumb/5/55/Michael_Jackson_-_Thriller.png/220px-Michael_Jackson_-_Thriller.png',
+        imagen: 'https://res.cloudinary.com/duwi53e7z/image/upload/v1753838836/thriller-arte-de-tapa-1_nxkbxx.png',
         duracion: '4:54',
-        cancion: 'https://example.com/song10'
+        audio: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-10.mp3'
     },
     {
         id: '293ijk',
@@ -105,8 +105,8 @@ export const cancionesData = [
         artista: 'Daft Punk',
         album: 'Discovery',
         genero: 'Electronica',
-        imagen: 'https://i.pinimg.com/1200x/49/b2/de/49b2de4504144d8f8ccdffee9b2fba71.jpg',
+        imagen: 'https://res.cloudinary.com/duwi53e7z/image/upload/v1753838876/49b2de4504144d8f8ccdffee9b2fba71_ywwahn.jpg',
         duracion: '5:20',
-        cancion: 'https://example.com/song11'
+        audio: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-11.mp3'
     }
 ];
