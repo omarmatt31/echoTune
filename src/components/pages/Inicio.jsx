@@ -18,11 +18,13 @@ const Inicio = ({canciones}) => {
     const [cancionesJazz, setCancionesJazz] = useState(listaJazz)
     const listaTrap = canciones.filter((itemCancion) => itemCancion.genero === 'Trap')|| []
     const [cancionesTrap, setCancionesTrap] = useState(listaTrap)
+    const [buscando, setBuscando] = useState(false)
 
     const handleBuscarChange=(e)=>{
         setTerminoBusqueda(e.target.value)
+        setBuscando(true)
     }
-
+    
     const cancionesBuscadas= canciones.filter((cancion)=>cancion.titulo.toLowerCase().includes(terminoBusqueda.toLocaleLowerCase()))
     
     return (
@@ -42,10 +44,7 @@ const Inicio = ({canciones}) => {
         <section className="mainSection bg-index">
             <Container className="mt-5">
                 <Form>
-                    <Row className="d-flex justify-content-between">
-                        <Col xs="auto">
-                            <h3 className="fw-light fs-3 color-secundario">Top Hits</h3>
-                        </Col>
+                    <Row className="d-flex justify-content-end">
                         <Col xs="auto d-flex">
                                 <i className="bi bi-search fs-3 me-2 text-secondary"></i>
                                 <Form.Control
@@ -58,20 +57,34 @@ const Inicio = ({canciones}) => {
                         </Col>
                     </Row>
                 </Form>
-                <hr />
                 <Row>
                     {
-                    cancionesBuscadas.length > 0 ? (
-                    cancionesBuscadas.map((cancion)=><CardCancion key={cancion.id} cancion={cancion}></CardCancion>)
-                    ) : (
-                        <p>No se encontraron canciones para mostrar</p>
-                    )
-                    }
+                    buscando && (
+                        <>
+                        {cancionesBuscadas.length > 0 && cancionesBuscadas.length < canciones.length ? (
+                            <>
+                            <h3 className="fw-light fs-4 color-boton-cargar">Resultados de la Búsqueda</h3>
+                            <hr />
+                            {cancionesBuscadas.map((cancion) => (
+                                <CardCancion key={cancion.id} cancion={cancion} />
+                            ))}
+                            <hr />
+                            </>
+                        ) : cancionesBuscadas.length === 0 ? (
+                            <>
+                            <h3 className="fw-light fs-4 color-boton-cargar">Resultados de la Búsqueda</h3>
+                            <hr />
+                            <p className="fw-light fs-5">No se encontraron canciones para mostrar</p>
+                            <hr />
+                            </>
+                        ) : null}
+                        </>
+                    )}
                 </Row>
                 <Row>
                     <h3 className="fw-light fs-3 color-secundario">Rock</h3>
                 </Row>
-                <hr />
+
                 <Row>
                     {
                     cancionesRock.length > 0 ? (
@@ -84,7 +97,7 @@ const Inicio = ({canciones}) => {
                 <Row>
                     <h3 className="fw-light fs-3 color-secundario">Pop</h3>
                 </Row>
-                <hr />
+
                 <Row>
                     {
                     cancionesPop.length > 0 ? (
@@ -97,7 +110,6 @@ const Inicio = ({canciones}) => {
                 <Row>
                     <h3 className="fw-light fs-3 color-secundario">Electronica</h3>
                 </Row>
-                <hr />
                 <Row>
                     {
                     cancionesElectronica.length > 0 ? (
@@ -110,7 +122,7 @@ const Inicio = ({canciones}) => {
                 <Row>
                     <h3 className="fw-light fs-3 color-secundario">Folclore</h3>
                 </Row>
-                <hr />
+
                 <Row>
                     {
                     cancionesFolclore.length > 0 ? (
@@ -123,7 +135,7 @@ const Inicio = ({canciones}) => {
                 <Row>
                     <h3 className="fw-light fs-3 color-secundario">Jazz</h3>
                 </Row>
-                <hr />
+
                 <Row>
                     {
                     cancionesJazz.length > 0 ? (
@@ -136,7 +148,6 @@ const Inicio = ({canciones}) => {
                 <Row>
                     <h3 className="fw-light fs-3 color-secundario">Trap</h3>
                 </Row>
-                <hr />
                 <Row>
                     {
                     cancionesTrap.length > 0 ? (
